@@ -38,7 +38,17 @@
     <body>
         <div class="container">
             <div class="content">
-               <h1> Welcome to laravel test Series </h1>
+                {!! Form::open(['action' => 'OfferController@store']) !!}
+
+                    {!! Form::label('Title', 'Enter the Title') !!}
+                     {!! Form::text('title') !!}
+
+                     {!! Form::label('Price', 'Enter the Price') !!}
+                     {!! Form::text('price') !!}
+
+                    {!! Form::submit('Save!') !!}
+
+                {!! Form::close() !!}
             </div>
         </div>
     </body>
